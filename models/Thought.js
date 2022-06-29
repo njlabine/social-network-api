@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose")
 const reactionSchema = requier("./Reaction")
 
-const { Schema, model } = require("mongoose")
+
 
 const thoughtSchema = new Schema(
   {
