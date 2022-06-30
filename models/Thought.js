@@ -12,18 +12,16 @@ const thoughtSchema = new Schema(
     },
     createdAt: {
       type: Date,
-      default: Date.now(),
+      default: Date.now()
 
     
     },
     username: {
         type: String,
         required: true
-    }
-  },
-  reactions: [
-      reactionSchema
-  ],
+    },
+    reactions: [reactionSchema],
+    },
   {
     toJSON: {
       getters: true,
@@ -31,12 +29,13 @@ const thoughtSchema = new Schema(
   }
 );
 
-const Thought = model('thought', userSchema);
-
-thoughtSchema.virtual("reactionCount").get(funtion(){
-    return this.friends.length
+thoughtSchema.virtual('friendCount').get(function () {
+  return this.friends.length;
 });
 
-module.exports = User;
+const Thought = model('thought', userSchema);
+
+
+
 
 module.exports = Thought;

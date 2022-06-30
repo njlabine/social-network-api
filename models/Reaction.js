@@ -18,13 +18,14 @@ const reactionSchema = new Schema(
         required: true
     }
   },
-  createdAt: {
-      type: Date,
-      default: ate 
-  }
+//   createdAt: {
+//       type: Date,
+//       default: ate 
+//   }
   {
     toJSON: {
       getters: true,
+      virtuals: true,
     },
   }
 );
